@@ -12,4 +12,6 @@ graph LR
     gesture_spotify_player --> math[math]
     gesture_spotify_player --> os[os]
     gesture_spotify_player --> argparse[argparse]
+    click check_env href "https://github.com/USER/REPO/blob/main/check_env.py" "View source code"
+    click gesture_spotify_player href "https://github.com/USER/REPO/blob/main/gesture_spotify_player.py" "View source code"
 ```

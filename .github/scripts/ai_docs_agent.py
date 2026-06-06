@@ -119,11 +119,40 @@ class AIDocsAgent:
 
         return "\n".join(readme_content)
 
+    def generate_extended_docs(self):
+        """Generate additional documentation files using LLM."""
+        os.makedirs(self.docs_dir, exist_ok=True)
+
+        # Onboarding Guide
+        prompt_onboarding = f"""
+        Based on the following repository analysis, write a concise 'Developer Onboarding Guide'.
+        Structure: {json.dumps(self.data.get('structure', {}))}
+        Dependencies: {json.dumps(self.data.get('dependencies', {}))}
+        Include sections: Prerequisites, Local Setup, Architecture Primer. Use Markdown format.
+        """
+        onboarding_content = self.call_llm(prompt_onboarding)
+        with open(os.path.join(self.docs_dir, 'onboarding_guide.md'), 'w', encoding='utf-8') as f:
+            f.write(f"# Developer Onboarding Guide\n\n{onboarding_content}")
+
+        # Developer Docs
+        prompt_devdocs = f"""
+        Based on the following repository analysis, write a brief 'Developer Documentation' guide.
+        Structure: {json.dumps(self.data.get('structure', {}))}
+        Dependencies: {json.dumps(self.data.get('dependencies', {}))}
+        Include sections: Code Organization, Key Components, Environment Variables. Use Markdown format.
+        """
+        devdocs_content = self.call_llm(prompt_devdocs)
+        with open(os.path.join(self.docs_dir, 'developer_docs.md'), 'w', encoding='utf-8') as f:
+            f.write(f"# Developer Documentation\n\n{devdocs_content}")
+
+        print("Extended documentation generated successfully.")
+
     def update_readme(self):
         content = self.generate_readme()
         with open('README.md', 'w', encoding='utf-8') as f:
             f.write(content)
         print("README.md updated successfully.")
+        self.generate_extended_docs()
 
 if __name__ == '__main__':
     agent = AIDocsAgent()

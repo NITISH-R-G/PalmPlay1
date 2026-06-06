@@ -1,5 +1,3 @@
 __pycache__/
 *.pyc
 .env
-repo_analysis.json
-.github/docs/

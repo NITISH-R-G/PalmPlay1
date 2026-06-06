@@ -26,6 +26,15 @@ class DiagramGenerator:
                     node_id = f.replace('.', '_').replace('-', '_')
                     mermaid.append(f"        {node_id}[{f}]")
 
+        # Add interactive click events for files
+        repo = os.environ.get("GITHUB_REPOSITORY", "USER/REPO")
+        branch = os.environ.get("GITHUB_REF_NAME", "main")
+        base_url = f"https://github.com/{repo}/blob/{branch}/"
+
+        for f in files:
+            node_id = f.replace('.', '_').replace('-', '_')
+            mermaid.append(f"        click {node_id} href \"{base_url}{f}\" \"View source code\"")
+
         mermaid.append("    end")
 
         # Add external dependencies
@@ -62,6 +71,16 @@ class DiagramGenerator:
             for imp in imports:
                 imp_id = imp.replace('.', '_').replace('-', '_')
                 mermaid.append(f"    {mod_id} --> {imp_id}[{imp}]")
+
+        repo = os.environ.get("GITHUB_REPOSITORY", "USER/REPO")
+        branch = os.environ.get("GITHUB_REF_NAME", "main")
+        base_url = f"https://github.com/{repo}/blob/{branch}/"
+
+        for module in kg.keys():
+            mod_id = module.replace('.', '_').replace('-', '_')
+            # Assuming typical python module path resolution
+            filepath = module.replace('.', '/') + ".py"
+            mermaid.append(f"    click {mod_id} href \"{base_url}{filepath}\" \"View source code\"")
 
         mermaid.append("```")
         return "\n".join(mermaid)

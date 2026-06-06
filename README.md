@@ -40,6 +40,8 @@ graph TD
     subgraph Repository
         check_env_py[check_env.py]
         gesture_spotify_player_py[gesture_spotify_player.py]
+        click check_env_py href "https://github.com/USER/REPO/blob/main/check_env.py" "View source code"
+        click gesture_spotify_player_py href "https://github.com/USER/REPO/blob/main/gesture_spotify_player.py" "View source code"
     end
     subgraph Frameworks
         fw_pygame[pygame]
@@ -66,4 +68,6 @@ graph LR
     gesture_spotify_player --> math[math]
     gesture_spotify_player --> os[os]
     gesture_spotify_player --> argparse[argparse]
+    click check_env href "https://github.com/USER/REPO/blob/main/check_env.py" "View source code"
+    click gesture_spotify_player href "https://github.com/USER/REPO/blob/main/gesture_spotify_player.py" "View source code"
 ```

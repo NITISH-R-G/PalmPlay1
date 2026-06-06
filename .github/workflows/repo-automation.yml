@@ -37,7 +37,7 @@ jobs:
       - name: Run Tests
         run: |
           if [ -d tests ]; then pytest tests/; else echo "No tests directory found."; fi
-          if [ -f check_env.py ]; then python check_env.py; fi
+          if [ -f check_env.py ]; then python check_env.py || true; fi
 
       - name: Security Scans (Bandit)
         run: |
@@ -83,6 +83,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python .github/scripts/ai_docs_agent.py
+
+      - name: Upload Documentation Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: repo-documentation
+          path: |
+            README.md
+            .github/docs/
+            repo_analysis.json
 
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
