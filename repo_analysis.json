@@ -1,0 +1,51 @@
+{
+  "structure": {
+    "": {
+      "dirs": [],
+      "files": [
+        "gesture_spotify_player.py",
+        ".gitignore",
+        "requirements.txt",
+        "gestures_spotify_colab.ipynb",
+        "check_env.py",
+        "README.md"
+      ]
+    }
+  },
+  "dependencies": {
+    "python": [
+      "opencv-python",
+      "mediapipe",
+      "pycaw",
+      "pygame",
+      "numpy"
+    ],
+    "node": [],
+    "frameworks": [
+      "opencv-python",
+      "pygame",
+      "mediapipe"
+    ],
+    "env_vars": [
+      "SPOTIPY_REDIRECT_URI",
+      "SPOTIPY_CLIENT_SECRET",
+      "SPOTIPY_CLIENT_ID"
+    ],
+    "services": []
+  },
+  "knowledge_graph": {
+    "gesture_spotify_player": [
+      "math",
+      "collections",
+      "numpy",
+      "argparse",
+      "cv2",
+      "os",
+      "time"
+    ],
+    "check_env": [
+      "importlib"
+    ]
+  },
+  "files_count": 6
+}
