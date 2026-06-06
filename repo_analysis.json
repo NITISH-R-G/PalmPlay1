@@ -3,10 +3,11 @@
     "": {
       "dirs": [],
       "files": [
-        "gestures_spotify_colab.ipynb",
-        "requirements.txt",
-        "check_env.py",
         "gesture_spotify_player.py",
+        ".gitignore",
+        "requirements.txt",
+        "gestures_spotify_colab.ipynb",
+        "check_env.py",
         "README.md"
       ]
     }
@@ -21,8 +22,8 @@
     ],
     "node": [],
     "frameworks": [
-      "pygame",
       "opencv-python",
+      "pygame",
       "mediapipe"
     ],
     "env_vars": [
@@ -33,18 +34,18 @@
     "services": []
   },
   "knowledge_graph": {
+    "gesture_spotify_player": [
+      "math",
+      "collections",
+      "numpy",
+      "argparse",
+      "cv2",
+      "os",
+      "time"
+    ],
     "check_env": [
       "importlib"
-    ],
-    "gesture_spotify_player": [
-      "collections",
-      "cv2",
-      "time",
-      "numpy",
-      "math",
-      "os",
-      "argparse"
     ]
   },
-  "files_count": 5
+  "files_count": 6
 }
