@@ -27,21 +27,21 @@
       "opencv-python"
     ],
     "env_vars": [
+      "SPOTIPY_REDIRECT_URI",
       "SPOTIPY_CLIENT_SECRET",
-      "SPOTIPY_CLIENT_ID",
-      "SPOTIPY_REDIRECT_URI"
+      "SPOTIPY_CLIENT_ID"
     ],
     "services": []
   },
   "knowledge_graph": {
     "gesture_spotify_player": [
+      "collections",
       "numpy",
-      "os",
+      "cv2",
       "math",
       "argparse",
-      "collections",
-      "time",
-      "cv2"
+      "os",
+      "time"
     ],
     "check_env": [
       "importlib"
