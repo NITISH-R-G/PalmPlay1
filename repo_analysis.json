@@ -22,14 +22,14 @@
     ],
     "node": [],
     "frameworks": [
-      "pygame",
       "opencv-python",
-      "mediapipe"
+      "mediapipe",
+      "pygame"
     ],
     "env_vars": [
       "SPOTIPY_CLIENT_ID",
-      "SPOTIPY_CLIENT_SECRET",
-      "SPOTIPY_REDIRECT_URI"
+      "SPOTIPY_REDIRECT_URI",
+      "SPOTIPY_CLIENT_SECRET"
     ],
     "services": []
   },
@@ -38,13 +38,13 @@
       "importlib"
     ],
     "gesture_spotify_player": [
+      "argparse",
+      "time",
       "os",
       "numpy",
+      "math",
       "cv2",
-      "argparse",
-      "collections",
-      "time",
-      "math"
+      "collections"
     ]
   },
   "files_count": 6
