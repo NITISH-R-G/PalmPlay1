@@ -38,13 +38,13 @@
       "importlib"
     ],
     "gesture_spotify_player": [
-      "argparse",
-      "time",
-      "os",
       "numpy",
-      "math",
+      "collections",
       "cv2",
-      "collections"
+      "argparse",
+      "math",
+      "os",
+      "time"
     ]
   },
   "files_count": 6
