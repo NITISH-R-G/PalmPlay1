@@ -7,7 +7,7 @@
 This repository is continuously analyzed, documented, and maintained by an automated AI agent and CI/CD pipelines. (AI summarization disabled: no API key).
 
 ## Technology Stack
-**Frameworks:** opencv-python, pygame, mediapipe
+**Frameworks:** mediapipe, pygame, opencv-python
 **Python Dependencies:** opencv-python, mediapipe, pycaw, pygame, numpy
 
 
@@ -24,8 +24,8 @@ This repository is continuously analyzed, documented, and maintained by an autom
 ## Environment Variables
 The following environment variables were detected in the codebase:
 - `SPOTIPY_REDIRECT_URI`
-- `SPOTIPY_CLIENT_SECRET`
 - `SPOTIPY_CLIENT_ID`
+- `SPOTIPY_CLIENT_SECRET`
 
 
 ## Setup Instructions
@@ -45,28 +45,28 @@ graph TD
         click check_env_py href "https://github.com/NITISH-R-G/PalmPlay1/blob/main/check_env.py" "View source code"
     end
     subgraph Frameworks
-        fw_opencv_python[opencv-python]
-        fw_pygame[pygame]
         fw_mediapipe[mediapipe]
+        fw_pygame[pygame]
+        fw_opencv_python[opencv-python]
     end
-    gesture_spotify_player_py -.-> fw_opencv_python
-    gesture_spotify_player_py -.-> fw_pygame
     gesture_spotify_player_py -.-> fw_mediapipe
-    check_env_py -.-> fw_opencv_python
-    check_env_py -.-> fw_pygame
+    gesture_spotify_player_py -.-> fw_pygame
+    gesture_spotify_player_py -.-> fw_opencv_python
     check_env_py -.-> fw_mediapipe
+    check_env_py -.-> fw_pygame
+    check_env_py -.-> fw_opencv_python
 ```
 ### Module Dependencies
 ```mermaid
 graph LR
     gesture_spotify_player[gesture_spotify_player]
-    gesture_spotify_player --> cv2[cv2]
-    gesture_spotify_player --> os[os]
-    gesture_spotify_player --> collections[collections]
-    gesture_spotify_player --> math[math]
-    gesture_spotify_player --> argparse[argparse]
-    gesture_spotify_player --> numpy[numpy]
     gesture_spotify_player --> time[time]
+    gesture_spotify_player --> numpy[numpy]
+    gesture_spotify_player --> argparse[argparse]
+    gesture_spotify_player --> os[os]
+    gesture_spotify_player --> math[math]
+    gesture_spotify_player --> cv2[cv2]
+    gesture_spotify_player --> collections[collections]
     check_env[check_env]
     check_env --> importlib[importlib]
     click gesture_spotify_player href "https://github.com/NITISH-R-G/PalmPlay1/blob/main/gesture_spotify_player.py" "View source code"
