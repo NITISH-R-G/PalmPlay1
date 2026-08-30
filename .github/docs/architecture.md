@@ -9,14 +9,14 @@ graph TD
         click check_env_py href "https://github.com/NITISH-R-G/PalmPlay1/blob/main/check_env.py" "View source code"
     end
     subgraph Frameworks
-        fw_mediapipe[mediapipe]
         fw_pygame[pygame]
         fw_opencv_python[opencv-python]
+        fw_mediapipe[mediapipe]
     end
-    gesture_spotify_player_py -.-> fw_mediapipe
     gesture_spotify_player_py -.-> fw_pygame
     gesture_spotify_player_py -.-> fw_opencv_python
-    check_env_py -.-> fw_mediapipe
+    gesture_spotify_player_py -.-> fw_mediapipe
     check_env_py -.-> fw_pygame
     check_env_py -.-> fw_opencv_python
+    check_env_py -.-> fw_mediapipe
 ```
