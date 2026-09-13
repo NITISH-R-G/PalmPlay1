@@ -10,13 +10,13 @@ graph TD
     end
     subgraph Frameworks
         fw_mediapipe[mediapipe]
-        fw_opencv_python[opencv-python]
         fw_pygame[pygame]
+        fw_opencv_python[opencv-python]
     end
     gesture_spotify_player_py -.-> fw_mediapipe
-    gesture_spotify_player_py -.-> fw_opencv_python
     gesture_spotify_player_py -.-> fw_pygame
+    gesture_spotify_player_py -.-> fw_opencv_python
     check_env_py -.-> fw_mediapipe
-    check_env_py -.-> fw_opencv_python
     check_env_py -.-> fw_pygame
+    check_env_py -.-> fw_opencv_python
 ```
