@@ -22,26 +22,26 @@
     ],
     "node": [],
     "frameworks": [
-      "pygame",
       "mediapipe",
-      "opencv-python"
+      "opencv-python",
+      "pygame"
     ],
     "env_vars": [
-      "SPOTIPY_CLIENT_ID",
       "SPOTIPY_REDIRECT_URI",
+      "SPOTIPY_CLIENT_ID",
       "SPOTIPY_CLIENT_SECRET"
     ],
     "services": []
   },
   "knowledge_graph": {
     "gesture_spotify_player": [
-      "collections",
       "argparse",
-      "math",
       "time",
-      "os",
+      "numpy",
       "cv2",
-      "numpy"
+      "os",
+      "math",
+      "collections"
     ],
     "check_env": [
       "importlib"
