@@ -22,8 +22,8 @@
     ],
     "node": [],
     "frameworks": [
-      "mediapipe",
       "opencv-python",
+      "mediapipe",
       "pygame"
     ],
     "env_vars": [
@@ -35,13 +35,13 @@
   },
   "knowledge_graph": {
     "gesture_spotify_player": [
-      "argparse",
-      "time",
-      "numpy",
       "cv2",
-      "os",
+      "numpy",
       "math",
-      "collections"
+      "os",
+      "collections",
+      "argparse",
+      "time"
     ],
     "check_env": [
       "importlib"
